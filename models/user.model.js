@@ -23,6 +23,7 @@ const userSchema = new Schema({
   },
 });
 
+//for hashing of password
 userSchema.pre("save", async function (next) {
   const rounds = 10;
   this.password = await bcrypt.hash(this.password, rounds);

@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const usersRouter = require("./routes/usersRouter");
+const visitsRouter = require("./routes/visitsRouter");
 
 const cors = require("cors");
 
@@ -27,6 +28,9 @@ app.get("/", (req, res) => {
 
 /* -- user route -- */
 app.use("/users", usersRouter);
+
+/* -- visit route -- */
+app.use("/visits", visitsRouter);
 
 //error handling
 app.use((err, req, res, next) => {

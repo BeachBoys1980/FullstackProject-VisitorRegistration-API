@@ -18,7 +18,14 @@ describe("users.route", () => {
   });
 
   describe("/users", () => {
-    // 1. test for creating a new user
+    // 1. test for getting all users
+    it("GET / should return with all 'users'", async () => {
+      const response = await request(app).get("/");
+
+      expect(response.status).toEqual(200);
+    });
+
+    // 2. test for creating a new user
     it("POST should return new user", async () => {
       const expectedUser = {
         username: "user 3",
