@@ -3,6 +3,9 @@ const app = express();
 const usersRouter = require("./routes/usersRouter");
 const visitsRouter = require("./routes/visitsRouter");
 
+require("./utils/db");
+
+/* CORS */
 const cors = require("cors");
 
 var corsOptions = {
@@ -11,8 +14,13 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
+/* end of CORS */
 
-require("./utils/db");
+/* Cookies */
+const cookieParser = require("cookie-parser");
+app.use(cookieParser(process.env.COOKIES_SECRET));
+
+/* end of Cookies */
 
 app.use(express.json());
 
