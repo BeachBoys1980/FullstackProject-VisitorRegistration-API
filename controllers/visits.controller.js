@@ -26,8 +26,6 @@ const traceNricVisitDate = async (req, res, next) => {
   const dayAfter = new Date(req.query.contactTraceDate);
   dayAfter.setDate(dayAfter.getDate() + 1);
 
-  console.log(dateToFind.toUTCString(), dayAfter.toUTCString());
-
   const infectedVisitor = await VisitModel.findOne({
     nric: nricToFind,
     visitDateTime: { $gte: dateToFind, $lt: dayAfter },
