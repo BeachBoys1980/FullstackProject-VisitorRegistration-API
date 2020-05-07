@@ -16,7 +16,7 @@
 
 1. Misc Features
    - Controllers
-   - Protected routes for APIs
+   - Protected routes for APIs (ensure only authenticated users can access)
      - Create new users
      - Get all users
      - Get all visits
@@ -26,3 +26,10 @@
 ===============================================================================
 
 ** Product Backlog **
+
+1. - Protected routes for APIs (ensure only authorised users can access)
+   - Create new users (only ADMIN)
+   - Get all users (only ADMIN)
+   - Get all visits (only USER)
+   - Register new visit (only USER)
+   - Contact trace visit (only USER)
