@@ -56,9 +56,9 @@ const loginUser = async (req, res, next) => {
     // Can expiry date on cookie be changed? How about JWT token?
     res.cookie("token", token, {
       expires: expiryDate,
-      //httpOnly: true,
-      //secure: true,
-      //sameSite: "none",
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
       //signed: true,
     });
 
