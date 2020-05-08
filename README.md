@@ -33,3 +33,5 @@
    - Get all visits (only USER)
    - Register new visit (only USER)
    - Contact trace visit (only USER)
+
+2. Signed Cookies

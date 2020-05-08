@@ -57,6 +57,8 @@ const loginUser = async (req, res, next) => {
     res.cookie("token", token, {
       expires: expiryDate,
       httpOnly: true,
+      secure: true,
+      sameSite: "none",
       //signed: true,
     });
 
