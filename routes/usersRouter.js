@@ -6,6 +6,7 @@ const usersController = require("../controllers/users.controllers");
 
 // Protect a route trying to find user by username from cookie
 const protectRoute = (req, res, next) => {
+  console.log(req.cookies);
   try {
     if (!req.cookies.token) {
       throw new Error("You are not logged in.");
